@@ -6,7 +6,6 @@ const dns = require('dns');
 const fs = require('fs');
 const app = express();
 
-// Basic Configuration
 const port = process.env.PORT || 3000;
 
 app.use(cors());
@@ -18,9 +17,6 @@ app.get('/', function(req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
 });
 
-/*-----------------------------------------------------------------------------------------*/
-/*---------------------------------------MY CODE-------------------------------------------*/
-/*-----------------------------------------------------------------------------------------*/
 
 //1.function to manage local file storage (File data.json)
 function dataManagement(action, input) {
